@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Questions.xsl"?>
+<assessmentItems>
+	<assessmentItem author="rosa.arruabarrena@ehu.eus" subject="Mikologia">
+		<itemBody> 
+			<p>Zein Amanita da jangarria?</p>
+		</itemBody>
+		<correctResponse>
+			<value>Caesarea</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value1>Phalloides</value1>
+			<value2>Muscaria</value2>
+			<value3>Virosa</value3>
+		</incorrectResponses>
+	</assessmentItem>
+	<assessmentItem author="vadillo@ehu.es" subject="Mikologia">
+		<itemBody> 
+			<p>Tripakiek zer dute kapela azpian?</p>
+		</itemBody>
+		<correctResponse>
+			<value>Eztenak</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value1>Filamenduak</value1>
+			<value2>Himenioa</value2>
+			<value3>Hodiak</value3>
+		</incorrectResponses>
+	</assessmentItem>
+	<assessmentItem author="mafalda001@ikasle.ehu.eus" subject="Mikologia">
+		<itemBody>
+			<p>Eranztuna du</p>
+		</itemBody>
+		<correctResponse>
+			<value>Galanpernak</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value1>Gibel urdinak</value1>
+			<value2>Esnegorriak</value2>
+			<value3>Errotariak</value3>
+		</incorrectResponses>
+	</assessmentItem>
+	<assessmentItem author="aotero013@ikasle.ehu.eus" subject="Orokorra">
+		<itemBody>
+			<p>Zer urte da hau?</p>
+		</itemBody>
+		<correctResponse>
+			<value>2019</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value1>2018</value1>
+			<value2>2020</value2>
+			<value3>2021</value3>
+		</incorrectResponses>
+	</assessmentItem>
+<assessmentItem author="aotero013@ikasle.ehu.eus" subject="Orokorra">
+	<itemBody>
+		<p>Noiz amaitzen da negua?</p>
+	</itemBody>
+	<correctResponse>
+		<value>Martxoan</value>
+	</correctResponse>
+	<incorrectResponses>
+		<value1>Apirilean</value1>
+		<value2>Otsailan</value2>
+		<value3>Maiatzan</value3>
+	</incorrectResponses>
+</assessmentItem>
+<assessmentItem author="aotero013@ikasle.ehu.eus" subject="Zientzia">
+	<itemBody>
+		<p>Txakurrak zer dira?</p>
+	</itemBody>
+	<correctResponse>
+		<value>Ugaztunak</value>
+	</correctResponse>
+	<incorrectResponses>
+		<value1>Hegaztiak</value1>
+		<value2>Narrastiak</value2>
+		<value3>Arrainak</value3>
+	</incorrectResponses>
+</assessmentItem>
+</assessmentItems>
