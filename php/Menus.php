@@ -32,8 +32,15 @@
 		gArgazki.appendTo("#n1");
 		var gIkusi = $("<br><span id='galderakIkusispan'><a href='ShowQuestionsWithImage.php?eposta="+geteposta+"' id='galderakIkusi'>Galderak ikusi</a></span>");
 		gIkusi.appendTo("#n1");
+        
+        
 		var gIkusiXML = $("<br><span id='galderakIkusiXMLspan'><a href='ShowXMLQuestions.php?eposta="+geteposta+"' id='galderakXMLIkusi'>Ikusi XML galderak</a></span>");
 		gIkusiXML.appendTo("#n1");
+        
+        var gUserInfo = $("<br><span id='UserInfoFormularioaspan'><a href='GetUserInfo.php?eposta="+geteposta+"' id='getUserInfo'>User Info Formularioa</a></span>");
+		gUserInfo.appendTo("#n1");
+        
+        
 		var credits = $("<span id='kredituakspan'><a href='Credits.php?eposta="+geteposta+"' id='kredituak'>Kredituak</a></span>");
 		credits.appendTo("#n1"); 
 		
