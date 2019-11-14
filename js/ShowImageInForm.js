@@ -14,4 +14,5 @@ function erakutsi(input) {
 	
 function kenduirudia(){
 	$("#irudiberria").remove();
+    $("#gBistaraketa").find("table").remove();
 }

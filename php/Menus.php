@@ -36,9 +36,12 @@
         
 		var gIkusiXML = $("<br><span id='galderakIkusiXMLspan'><a href='ShowXMLQuestions.php?eposta="+geteposta+"' id='galderakXMLIkusi'>Ikusi XML galderak</a></span>");
 		gIkusiXML.appendTo("#n1");
+
+		var gKudeatu = $("<br><span id='galderakIkusiXMLspan'><a href='HandlingQuizesAjax.php?eposta="+geteposta+"' id='galderakKudeatu'>Galderak kudeatu</a></span>");
+		gKudeatu.appendTo("#n1");
         
-        var gUserInfo = $("<br><span id='UserInfoFormularioaspan'><a href='GetUserInfo.php?eposta="+geteposta+"' id='getUserInfo'>User Info Formularioa</a></span>");
-		gUserInfo.appendTo("#n1");
+        /*var gUserInfo = $("<br><span id='UserInfoFormularioaspan'><a href='GetUserInfo.php?eposta="+geteposta+"' id='getUserInfo'>User Info Formularioa</a></span>");
+		gUserInfo.appendTo("#n1");*/
         
         
 		var credits = $("<span id='kredituakspan'><a href='Credits.php?eposta="+geteposta+"' id='kredituak'>Kredituak</a></span>");

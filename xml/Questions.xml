@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="Questions.xsl"?>
 <assessmentItems>
-	<assessmentItem author="rosa.arruabarrena@ehu.eus" subject="Mikologia">
+	<assessmentItem author="rosa.arruabarrena@ehu.euse" subject="Mikologia">
 		<itemBody> 
 			<p>Zein Amanita da jangarria?</p>
 		</itemBody>
@@ -27,6 +27,18 @@
 			<value3>Hodiak</value3>
 		</incorrectResponses>
 	</assessmentItem>
+    <assessmentItem author="ecuesta012@ikasle.ehu.eus" subject="test ajax">
+        <itemBody><p>test galdera ajax</p>
+        </itemBody>
+        <correctResponse>
+            <value>b</value>
+        </correctResponse>
+        <incorrectResponses>
+            <value1>b</value1>
+            <value2>b</value2>
+            <value3>b</value3>
+        </incorrectResponses>
+    </assessmentItem>
 	<assessmentItem author="mafalda001@ikasle.ehu.eus" subject="Mikologia">
 		<itemBody>
 			<p>Eranztuna du</p>
@@ -79,4 +91,18 @@
 		<value3>Arrainak</value3>
 	</incorrectResponses>
 </assessmentItem>
-</assessmentItems>
+<assessmentItem author="ecuesta012@ikasle.ehu.eus" subject="test ajax">
+    <itemBody>
+        <p>test galdera ajax</p>
+    </itemBody>
+    <correctResponse>
+        <value>b</value>
+    </correctResponse>
+    <incorrectResponses>
+        <value1>b</value1>
+        <value2>b</value2>
+        <value3>b</value3>
+    </incorrectResponses>
+    </assessmentItem>
+    
+<assessmentItem author="ecuesta012@ikasle.ehu.eus" subject="t"><itemBody><p>test galdera ajax2</p></itemBody><correctResponse><value>t</value></correctResponse><incorrectResponses><value1>t</value1><value2>t</value2><value3>t</value3></incorrectResponses></assessmentItem></assessmentItems>
