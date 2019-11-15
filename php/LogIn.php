@@ -33,7 +33,7 @@
 				foreach ($konexioa->query('SELECT Posta, Pasahitza FROM logindatuak') as $row){
 					if (!(strcmp($row['Posta'],$_POST["eposta"]))) {
 						if(!(strcmp($row['Pasahitza'],$_POST["pasahitza"]))){
-							$URL = "http://localhost/pWS19t12_2/php/Layout.php?eposta=".$_POST["eposta"];
+							$URL = "Layout.php?eposta=".$_POST["eposta"];
 							echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 							exit();
 						}
