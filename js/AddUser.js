@@ -21,7 +21,7 @@ $(document).ready(function(){
 	        alert("Erabiltzailea zuzen erregistratu da");
         }
        
-        return true;
+        return false;
     });
                  
              

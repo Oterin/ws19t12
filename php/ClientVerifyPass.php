@@ -4,10 +4,13 @@
 	require_once('../lib/class.wsdlcache.php');
 	//nusoap_client motadun objektua sortzen dugu. http://www.mydomain.com/server.php
 	//erabiliko den SOAP zerbitzua non dagoen zehazten url horrek
-    //     $path="http://localhost/pWS19t12_2/php/VerifyPassWS.php?wsdl";
+    //     $path="http://localhost/pWS19t12_2/ws19t12/php/VerifyPassWS.php?wsdl";
 
-    $path="http://localhost/pWS19t12_2/php/VerifyPassWS.php?wsdl";
-	$soapclient = new nusoap_client($path,true);
+    //$path=realpath('VerifyPassWS.php').'?wsdl';
+
+	//echo realpath('VerifyPassWS.php').'?wsdl';
+$path="http://localhost/pWS19t12_2/ws19t12/php/VerifyPassWS.php?wsdl";
+    $soapclient = new nusoap_client($path,true);
 	//Web-Service-n inplementatu dugun funtzioari dei egiten diogu,
 	// eta itzultzen diguna inprimatzen dugu
 	$pasahitza = $_GET["pass"];
