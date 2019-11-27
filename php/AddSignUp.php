@@ -15,6 +15,7 @@
 				echo("<p><a href='SignUp.php' id='erreg' >Saiatu berriro</a></p>");
 				exit();				
 			}
+    
 			if(!((@$_POST["mota"]==1)||(@$_POST["mota"]==2))){
 				echo("<p>Erabiltzaile mota bat aukeratu behar da</p>");
 				echo("<p><a href='SignUp.php' id='erreg' >Saiatu berriro</a></p>");

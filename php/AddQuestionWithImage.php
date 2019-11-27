@@ -6,13 +6,6 @@
 <body>
 	<?php include '../php/Menus.php' ?>
 	<?php include '../php/DbConfig.php' ?>
-	<?php	
-		if(isset($_GET["eposta"])){
-	?>
-			<script>erakutsiLogeatuta();</script>
-	<?php
-		}
-	?>
 	<section class="main" id="s1">
 		<div>
 			<?php

@@ -6,13 +6,7 @@
 <body onload="nireGalderak('<?php echo($_GET["eposta"]);?>'),denbora('<?php echo($_GET["eposta"]);?>')">
 
 	<?php include '../php/Menus.php' ?>
-	<?php	
-		if(isset($_GET["eposta"])){
-	?>
-			<script>erakutsiLogeatuta();</script>
-	<?php
-		}
-	?>
+
 	<section class="main" id="s1">
 		<h3>Nire galderak</h3>
 		<div style="border-style: solid;border-width: 2px;" align="center" id="nireGalderak">

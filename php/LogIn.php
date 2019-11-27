@@ -2,10 +2,11 @@
 <html>
 <head>
 	<?php include '../html/Head.html'?>
+    <?php include '../php/Menus.php' ?>
+	<?php include '../php/DbConfig.php' ?>
 </head>
 <body>
-	<?php include '../php/Menus.php' ?>
-	<?php include '../php/DbConfig.php' ?>
+	
 	<section class="main" id="s1">
 		<div align="left">
 			<form id="erresgistro" name="erregistro" action="LogIn.php" method="post" enctype="multipart/form-data">
@@ -31,24 +32,42 @@
 			}
 			else{
 				foreach ($konexioa->query('SELECT Posta, Pasahitza FROM logindatuak') as $row){
-					if (!(strcmp($row['Posta'],$_POST["eposta"]))) {
-						if(!(strcmp($row['Pasahitza'],$_POST["pasahitza"]))){
-							$URL = "Layout.php?eposta=".$_POST["eposta"];
+					if ($row['Posta']==$_POST["eposta"]) {
+                        
+                        echo '<script>console.log("erabiltzailea aurkitu du '.$row['Posta'].'");</script>';
+
+						if($row['Pasahitza']==$_POST["pasahitza"]){
+                            echo '<script>console.log("pasahitza ondo sartu du '.$row['pasahitza'].'");</script>';
+							/*$URL = "Layout.php?eposta=".$_POST["eposta"];
 							echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-							exit();
+							exit();*/
+                            $_SESSION["posta"]=$row['Posta'];
+                            if($row['Posta']=="admin@ehu.es"){
+                            	$_SESSION["admin"]=true;
+                            }
+                            else{
+                                $_SESSION['admin']=false;
+                            }
+                            echo '<script>console.log("SESSION: '.$_SESSION["posta"].'");</script>';
+                            echo '<script>console.log("SESSION: '.$_SESSION["admin"].'");</script>';
+                            header("Location: Layout.php");
+                            exit();
+                            /*die();*/
+                        
 						}
-					}		
+					}else{
+                            ?>
+                            <script>
+                                var gaizki = $("<p id='gaizki'>Datuak ez dira zuzenak</p>");
+                                gaizki.appendTo("#s1");
+                            </script>
+                            <?php
+                    }		
 				}
-				?>
-				<script>
-					var gaizki = $("<p id='gaizki'>Datuak ez dira zuzenak</p>");
-					gaizki.appendTo("#s1");
-				</script>
-				<?php
+				
 			}
 			
-			mysqli_close($konexioa);
-				
+			mysqli_close($konexioa);	
 		}
 		
 	?>

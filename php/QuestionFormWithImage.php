@@ -5,13 +5,7 @@
 </head>
 <body>
 	<?php include '../php/Menus.php' ?>
-	<?php	
-		if(isset($_GET["eposta"])){
-	?>
-			<script>erakutsiLogeatuta();</script>
-	<?php
-		}
-	?>
+
 	<section class="main" id="s1">
 		<div align="left">
 			<form id="galderenF" name="galderenF" action="<?php echo('AddQuestionWithImage.php?eposta='.$_GET['eposta']) ?>" method="post" enctype="multipart/form-data">

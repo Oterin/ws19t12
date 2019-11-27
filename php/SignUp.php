@@ -9,13 +9,14 @@
 		<div align="left">
 			<form id="erregistro" name="erregistro" action="AddSignUp.php" method="post" enctype="multipart/form-data">
 				Eposta(*): <input type="text" id="eposta" name="eposta" size="80"  ></input> <div id="postaErantzuna"></div><br>
-				Erabiltzaile mota(*): <input type="Radio" name="ikasle" id="mota" value=1> Ikasle</input>
-				<input type="Radio" name="irakasle" id="mota" value=2> Irakasle </input><br>
+				Erabiltzaile mota(*): <input type="Radio" name="mota" id="ikasle" value=1> Ikasle</input>
+				<input type="Radio" name="mota" id="irakasle" value=2> Irakasle </input><br>
 				Deiturak(*): <input type="text" id="deiturak" name="deiturak" size="80" pattern="[a-zA-Z]{2,}( [a-zA-Z]{2,}){1,}"></input></br>
 				Pasahitza(*): <input type="password" id="pasahitza1" name="pasahitza1" size="80"></input><div id="passErantzuna"></div><br>
 				Berriro pasahitza(*): <input type="password" id="pasahitza2" name="pasahitza2" size="80"></input><br>
 				Irudia:<br><input type="file" id="irudia" name="irudia" accept="image/png,image/jpg,image/jpeg" onchange="erakutsi(this)"></input><br>
-				<input type="button" id="submit" value=" Bidali "></input>
+				<!--<input type="button" id="submit" value=" Bidali "></input>-->
+                <button type="submit" id="some" value="some">Bidali</button>
 				<input type="reset" id="ezabatu" value=" Ezabatu " onclick="kenduirudia()"></input><br>
 			</form>
 		</div>

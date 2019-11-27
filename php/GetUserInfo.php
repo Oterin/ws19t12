@@ -5,13 +5,6 @@
 </head>
 <body>
 	<?php include '../php/Menus.php' ?>
-	<?php	
-		if(isset($_GET["eposta"])){
-	?>
-			<script>erakutsiLogeatuta();</script>
-	<?php
-		}
-	?>
 	<section class="main" id="s1">
     <div>
 		<h2>Quiz: galderen jokoa</h2>
