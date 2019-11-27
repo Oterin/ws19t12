@@ -5,14 +5,13 @@
 </head>
 <body onload="erakutsiAdminak();">
 
-	<?php include '../php/Menus.php' ?>
-	<?php	
-		if(isset($_GET["eposta"])){
-	?>
-			<script>erakutsiLogeatuta();</script>
-	<?php
-		}
-	?>
+	<?php include '../php/Menus.php';
+        if(!isset($_SESSION['posta'])){
+            header("Location: Layout.php");
+            exit();
+        }
+    
+    ?>
 	<section class="main" id="s1">
 			<div id="adminTaulaBistaratu">
 				
@@ -27,7 +26,7 @@
 	<script type="text/javascript" src="../js/ShowAdmins.js"></script>
 	<script type="text/javascript" src="../js/UserKudeatu.js"></script>
     <script>
-	    var geteposta = "<?php echo $_GET['eposta']; ?>"
+	    var geteposta = "<?php echo $_SESSION['posta']; ?>"
 	    $("#eposta").val(geteposta);
 	</script>
 </body>

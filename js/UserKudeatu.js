@@ -5,7 +5,7 @@ function aldatuEgoera(num){
     const url = '../php/AldatuEgoera.php?eposta='+posta;
     http.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            alert("Aldatuta");
+            window.location.replace("../php/HandlingAccounts.php");
         }
 
     }
@@ -20,7 +20,7 @@ function ezabatuUser(num){
 
     http.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            alert("Aldatuta");
+            window.location.replace("../php/HandlingAccounts.php")
 
         }
 

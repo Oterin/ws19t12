@@ -24,16 +24,15 @@
 			
 			$konexioa = @mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) or die ("<p>Errorea: ezin izan da konexioa ezarri</p>");
 			
-			$query = 'SELECT Posta, Pasahitza FROM logindatuak';
+			$query = 'SELECT Posta, Pasahitza, Egoera FROM logindatuak';
 			$kon=@mysqli_query($konexioa,$query);
 			if(!$kon){
 				echo ("<p>Errorea: ezin izan da datu basea atzitu</p>");
 				exit();
 			}
 			else{
-				foreach ($konexioa->query('SELECT Posta, Pasahitza FROM logindatuak') as $row){
+				foreach ($konexioa->query('SELECT Posta, Pasahitza, Egoera FROM logindatuak') as $row){
 					if ($row['Posta']==$_POST["eposta"]) {
-                        
                         echo '<script>console.log("erabiltzailea aurkitu du '.$row['Posta'].'");</script>';
 
 						if($row['Pasahitza']==$_POST["pasahitza"]){
@@ -41,19 +40,28 @@
 							/*$URL = "Layout.php?eposta=".$_POST["eposta"];
 							echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 							exit();*/
-                            $_SESSION["posta"]=$row['Posta'];
                             
-                            echo '<script>console.log("SESSION: '.$_SESSION["posta"].'");</script>';
+                            if($row['Egoera']!='aktibo'){
+                                ?>
+                                <script>
+                                    alert("Erabiltzaile hau blokeatuta dago, mesedez kontaktatu administratzailearekin");
+                                </script>
+                                <?php
+                                break;
+                            }else{
+                                $_SESSION["posta"]=$row['Posta'];
                             
-                            if($row['Posta']=="admin@ehu.es"){
-                            	$_SESSION["admin"]=true;
-                                header("Location: HandlingAccounts.php");
-                                exit();
-                            }
-                            else{
-                                $_SESSION['admin']=false;
-                            }
-                            
+                                echo '<script>console.log("SESSION: '.$_SESSION["posta"].'");</script>';
+
+                                if($row['Posta']=="admin@ehu.es"){
+                                    $_SESSION["admin"]=true;
+                                    header("Location: HandlingAccounts.php");
+                                    exit();
+                                }
+                                else{
+                                    $_SESSION['admin']=false;
+                                }
+                            }       
                             header("Location: HandlingQuizesAjax.php");
                             exit();
                             /*die();*/
@@ -83,5 +91,6 @@
 	</script>
 
 	<script type="text/javascript" src="../js/ShowImageInForm.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>
