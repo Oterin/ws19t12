@@ -6,6 +6,7 @@
         <script>
             function erakutsiLogeatuta(){
                 var geteposta = "<?php echo $_SESSION['posta'] ?>";
+                var getAdmin = "<?php echo $_SESSION["admin"] ?>";
                 console.log("sessionPOSTA: "+geteposta);
                 $("#erregspan").remove();
                 $("#logspan").remove();
@@ -39,6 +40,17 @@
                 var erabiltzaile = $("<span id='erabiltzaile' class='right'>"+geteposta+"&nbsp</span>");
                 erabiltzaile.appendTo("#logoutspan");
 
+                
+                if(getAdmin){
+                    console.log("sessionAdmin: true");
+                     var eKudeatu = $("<br><span id='kontuakKudeatuspan'><a href='HandlingAccounts.php' id='kontuakKudeatu'>Kontuak Kudeatu</a></span>");
+                     eKudeatu.appendTo("#n1");
+                    
+                    
+                }
+                
+                
+                
                 <?php
                     $konexioa = @mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) or die ("Errorea: ezin izan da konexioa ezarri");
                     $query = 'SELECT Posta, Argazkia FROM logindatuak';
@@ -70,4 +82,5 @@
         <script>erakutsiLogeatuta();</script>
 	   <?php
     }
+    
 ?>

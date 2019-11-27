@@ -10,7 +10,12 @@
 	</style>
 </head>
 <body>
-	<?php include '../php/Menus.php' ?>
+	<?php include '../php/Menus.php';
+    if(!isset($_SESSION['posta'])){
+            header("Location: Layout.php");
+            exit();
+        }
+    ?>
 	<section class="main" id="s1">
 		<div>
 		<?php

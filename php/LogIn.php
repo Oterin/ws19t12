@@ -42,15 +42,19 @@
 							echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 							exit();*/
                             $_SESSION["posta"]=$row['Posta'];
+                            
+                            echo '<script>console.log("SESSION: '.$_SESSION["posta"].'");</script>';
+                            
                             if($row['Posta']=="admin@ehu.es"){
                             	$_SESSION["admin"]=true;
+                                header("Location: HandlingAccounts.php");
+                                exit();
                             }
                             else{
                                 $_SESSION['admin']=false;
                             }
-                            echo '<script>console.log("SESSION: '.$_SESSION["posta"].'");</script>';
-                            echo '<script>console.log("SESSION: '.$_SESSION["admin"].'");</script>';
-                            header("Location: Layout.php");
+                            
+                            header("Location: HandlingQuizesAjax.php");
                             exit();
                             /*die();*/
                         
