@@ -89,9 +89,12 @@
 				$helburua = $helburuaAldatu;
 				copy($non, $helburua);
 			}
+
+			$pass = $_POST["pasahitza1"];
+			$passHash = password_hash($pass, PASSWORD_BCRYPT);
 			
 			$sql = "INSERT INTO logindatuak (Posta, Mota, Deiturak, Pasahitza, Argazkia) VALUES
-				  ('$_POST[eposta]' , '$_POST[mota]', '$_POST[deiturak]', '$_POST[pasahitza1]' , '$helburua')";
+				  ('$_POST[eposta]' , '$_POST[mota]', '$_POST[deiturak]', '".$passHash."' , '$helburua')";
 
 			$ema=@mysqli_query($konexioa,$sql);
 			

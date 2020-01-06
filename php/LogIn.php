@@ -35,7 +35,7 @@
 					if ($row['Posta']==$_POST["eposta"]) {
                         echo '<script>console.log("erabiltzailea aurkitu du '.$row['Posta'].'");</script>';
 
-						if($row['Pasahitza']==$_POST["pasahitza"]){
+						if(password_verify($_POST["pasahitza"], $row['Pasahitza'])){
                             echo '<script>console.log("pasahitza ondo sartu du '.$row['pasahitza'].'");</script>';
 							/*$URL = "Layout.php?eposta=".$_POST["eposta"];
 							echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';

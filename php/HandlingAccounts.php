@@ -6,8 +6,8 @@
 <body onload="erakutsiAdminak();">
 
 	<?php include '../php/Menus.php';
-        if(!isset($_SESSION['posta'])){
-            header("Location: Layout.php");
+        if(!isset($_SESSION['admin']) || !$_SESSION['admin']){
+            echo ('<script>window.location.replace("../php/Layout.php")</script>');
             exit();
         }
     

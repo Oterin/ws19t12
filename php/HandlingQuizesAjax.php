@@ -6,8 +6,8 @@
 <body onload="nireGalderak('<?php echo($_GET["eposta"]);?>'),denbora('<?php echo($_GET["eposta"]);?>')">
 
 	<?php include '../php/Menus.php';
-        if(!isset($_SESSION['posta'])){
-            header("Location: Layout.php");
+        if(!isset($_SESSION['posta']) || $_SESSION['admin']){
+            echo ('<script>window.location.replace("../php/Layout.php")</script>');
             exit();
         }
     
