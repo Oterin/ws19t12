@@ -31,7 +31,7 @@
 				exit();
 			}
 			else{
-				foreach ($konexioa->query('SELECT Posta, Pasahitza, Egoera FROM logindatuak') as $row){
+				foreach ($konexioa->query('SELECT Posta, Deiturak, Pasahitza, Egoera FROM logindatuak') as $row){
 					if ($row['Posta']==$_POST["eposta"]) {
                         echo '<script>console.log("erabiltzailea aurkitu du '.$row['Posta'].'");</script>';
 
@@ -50,6 +50,7 @@
                                 break;
                             }else{
                                 $_SESSION["posta"]=$row['Posta'];
+                                $_SESSION["deiturak"] = $row["Deiturak"];
                             
                                 echo '<script>console.log("SESSION: '.$_SESSION["posta"].'");</script>';
 

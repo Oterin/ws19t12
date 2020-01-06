@@ -6,8 +6,10 @@
         <script>
             function erakutsiLogeatuta(){
                 var geteposta = "<?php echo $_SESSION['posta'] ?>";
+                var getDeitura = "<?php echo $_SESSION['deiturak'] ?>"
                 var getAdmin = "<?php echo $_SESSION["admin"] ?>";
                 console.log("sessionPOSTA: "+geteposta);
+                console.log("sessionPOSTA: "+getDeitura);
                 $("#erregspan").remove();
                 $("#logspan").remove();
                 $("#anonimospan").remove();
@@ -29,6 +31,9 @@
 
                 var gKudeatu = $("<br><span id='galderakIkusiXMLspan'><a href='HandlingQuizesAjax.php?eposta="+geteposta+"' id='galderakKudeatu'>Galderak kudeatu</a></span>");
                 gKudeatu.appendTo("#n1");
+
+                var gJolastu = $("<br><span id=jolastuspan'><a href='Jolastera.php?eposta="+geteposta+"' id='jolastera'>Jolastera</a></span>");
+                gJolastu.appendTo("#n1");
 
                 /*var gUserInfo = $("<br><span id='UserInfoFormularioaspan'><a href='GetUserInfo.php?eposta="+geteposta+"' id='getUserInfo'>User Info Formularioa</a></span>");
                 gUserInfo.appendTo("#n1");*/
