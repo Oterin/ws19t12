@@ -2,7 +2,7 @@
 <?php 
 	session_start();
 	$gaia = $_SESSION['gaiaJolastu'];
-	$deitura = $_SESSION['deiturak'];
+	$deitura = $_SESSION['nick'];
 	$asmatuak = $_SESSION['asmatuak'];
 	$asmatugabeak = $_SESSION['asmatugabeak'];
 	$konexioa = @mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) or die ("Errorea: ezin izan da konexioa ezarri");

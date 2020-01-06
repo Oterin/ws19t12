@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#submit').click(function(){
         var erabiltzaile=$("#erabiltzaile").text();
-        $.post('../php/AddQuestionWithImage.php?eposta='+erabiltzaile,{
+        $.post('../php/AddQuestionWithImage.php',{
             eposta       :$('#eposta').val(),
             galdera       :$('#galdera').val(),
             zuzena        :$('#zuzena').val(),

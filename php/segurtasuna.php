@@ -15,43 +15,46 @@
                 $("#anonimospan").remove();
                 $("#hasieraspan").remove();
                 $("#kredituakspan").remove();
-
-                var logout = $("<span id='logoutspan' class='right'><a href='irten.php' id='logout'>Logout</a>&nbsp</span>");
-                logout.appendTo("#h1"); 
-                var layout = $("<span id='hasieraspan'><a href='Layout.php?eposta="+geteposta+"' id='hasiera'>Hasiera</a></span>");
-                layout.appendTo("#n1"); 
-                /*var gArgazki = $("<br><span id='galderakArgazkispan'><a href='QuestionFormWithImage.php?eposta="+geteposta+"' id='galderakArgazki'>Galderak gehitu</a></span>");
-                gArgazki.appendTo("#n1");*/
-                var gIkusi = $("<br><span id='galderakIkusispan'><a href='ShowQuestionsWithImage.php?eposta="+geteposta+"' id='galderakIkusi'>Galderak ikusi</a></span>");
-                gIkusi.appendTo("#n1");
-
-
-                /*var gIkusiXML = $("<br><span id='galderakIkusiXMLspan'><a href='ShowXMLQuestions.php?eposta="+geteposta+"' id='galderakXMLIkusi'>Ikusi XML galderak</a></span>");
-                gIkusiXML.appendTo("#n1");*/
-
-                var gKudeatu = $("<br><span id='galderakIkusiXMLspan'><a href='HandlingQuizesAjax.php?eposta="+geteposta+"' id='galderakKudeatu'>Galderak kudeatu</a></span>");
-                gKudeatu.appendTo("#n1");
-
-                var gJolastu = $("<br><span id=jolastuspan'><a href='Jolastera.php?eposta="+geteposta+"' id='jolastera'>Jolastera</a></span>");
-                gJolastu.appendTo("#n1");
-
-                /*var gUserInfo = $("<br><span id='UserInfoFormularioaspan'><a href='GetUserInfo.php?eposta="+geteposta+"' id='getUserInfo'>User Info Formularioa</a></span>");
-                gUserInfo.appendTo("#n1");*/
-
-
-                var credits = $("<span id='kredituakspan'><a href='Credits.php?eposta="+geteposta+"' id='kredituak'>Kredituak</a></span>");
-                credits.appendTo("#n1"); 
-
-                var erabiltzaile = $("<span id='erabiltzaile' class='right'>"+geteposta+"&nbsp</span>");
-                erabiltzaile.appendTo("#logoutspan");
-
                 
                 if(getAdmin){
                     console.log("sessionAdmin: true");
+                     var logout = $("<span id='logoutspan' class='right'><a href='irten.php' id='logout'>Logout</a>&nbsp</span>");
+                     logout.appendTo("#h1"); 
+
                      var eKudeatu = $("<br><span id='kontuakKudeatuspan'><a href='HandlingAccounts.php' id='kontuakKudeatu'>Kontuak Kudeatu</a></span>");
                      eKudeatu.appendTo("#n1");
+
+                     var layout = $("<span id='hasieraspan'><a href='Layout.php?eposta="+geteposta+"' id='hasiera'>Hasiera</a></span>");
+                     layout.appendTo("#n1");
+
+                     var credits = $("<span id='kredituakspan'><a href='Credits.php?eposta="+geteposta+"' id='kredituak'>Kredituak</a></span>");
+                     credits.appendTo("#n1"); 
+
+                     var erabiltzaile = $("<span id='erabiltzaile' class='right'>"+geteposta+"&nbsp</span>");
+                     erabiltzaile.appendTo("#logoutspan");
                     
                     
+                }else{
+                    var logout = $("<span id='logoutspan' class='right'><a href='irten.php' id='logout'>Logout</a>&nbsp</span>");
+                    logout.appendTo("#h1"); 
+
+                    var layout = $("<span id='hasieraspan'><a href='Layout.php?eposta="+geteposta+"' id='hasiera'>Hasiera</a></span>");
+                    layout.appendTo("#n1");
+
+                    var gIkusi = $("<br><span id='galderakIkusispan'><a href='ShowQuestionsWithImage.php?eposta="+geteposta+"' id='galderakIkusi'>Galderak ikusi</a></span>");
+                    gIkusi.appendTo("#n1");
+
+                    var gKudeatu = $("<br><span id='galderakIkusiXMLspan'><a href='HandlingQuizesAjax.php?eposta="+geteposta+"' id='galderakKudeatu'>Galderak kudeatu</a></span>");
+                    gKudeatu.appendTo("#n1");
+
+                    var gJolastu = $("<br><span id=jolastuspan'><a href='Jolastera.php?eposta="+geteposta+"' id='jolastera'>Jolastera</a></span>");
+                    gJolastu.appendTo("#n1");
+
+                    var credits = $("<span id='kredituakspan'><a href='Credits.php?eposta="+geteposta+"' id='kredituak'>Kredituak</a></span>");
+                    credits.appendTo("#n1"); 
+
+                    var erabiltzaile = $("<span id='erabiltzaile' class='right'>"+geteposta+"&nbsp</span>");
+                    erabiltzaile.appendTo("#logoutspan");
                 }
                 
                 

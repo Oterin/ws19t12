@@ -23,7 +23,7 @@
 		<h3>Formularioa</h3>
 		<div style="border-style: solid;border-width: 2px;" align="left">
             <!--action="</?php echo('AddQuestionWithImage.php?eposta='.$_GET['eposta']) ?>"*/  -->
-			<form id="galderenF" name="galderenF" method="POST">
+			<form id="galderenF" action="AddQuestionWithImage.php" name="galderenF" method="POST" enctype="multipart/form-data">
 				Eposta(*): <input type="text" id="eposta" name="eposta" size="80"></input><br>
 				Galderaren testua(*): <input type="text" id="galdera" name="galdera" size="80"></input><br>
 				Erantzun zuzena(*): <input type="text" id="zuzena" name="zuzena" size="80"></input><br>
@@ -36,7 +36,8 @@
 				<input type="Radio" id="zailtasuna" name="zailtasuna" value=3> Handia</input><br>
 				Gaia(*): <input type="text" id="gaia" name="gaia" size="80"></input><br>
 				Irudia:<br><input type="file" id="irudia" name="irudia" accept="image/png,image/jpg,image/jpeg" onchange="erakutsi(this)"></input><br>
-				<input type="button" id="submit" value=" Bidali "></input>
+				<input type="button" id="submit" value=" Bidali "></input><br>
+<button type="submit" value="BidaliAjaxGabe">Bidali Ajax Gabe</button>
 				<input type="reset" id="ezabatu" value=" Ezabatu " onclick="kenduirudia()"></input><br>
 				<input type="button" id="gIkusi" value=" Galderak Bistaratu" onclick="ajax()"></input>
             </form>

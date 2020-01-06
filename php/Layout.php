@@ -10,7 +10,7 @@
 	<section class="main" id="s1">
     <div>
 
-		<h2>Quiz: galderen jokoa</h2>
+		<h2>Quiz: galderen jokoa</h2><br>
 		<h3>Emaitzak</h3>
 		Gaia: <?php 
 		$konexioa = @mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) or die ("Errorea: ezin izan da konexioa ezarri");
@@ -28,7 +28,7 @@
 				<?php
 			} ?>
 		</select><br>
-		<div align="center" id="clasiDiv">
+		<div style="padding: 10px 10px 10px 10px;" align="center" id="clasiDiv">
 			
 		</div>
       

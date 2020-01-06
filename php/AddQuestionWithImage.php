@@ -10,7 +10,9 @@
 		<div>
 			<?php
 			
-			if (!(preg_match("/^[a-zA-Z]{3,}[0-9]{3}@ikasle[.]ehu[.]e[u]{0,1}s$/", $_POST["eposta"]) || preg_match("/^[a-zA-Z]+([.][a-zA-Z]+){0,1}@ehu[.]e[u]{0,1}s$/", $_POST["eposta"]))){
+			if (!(preg_match("/^[a-zA-Z]{3,}[0-9]{3}@ikasle[.]ehu[.]e[u]{0,1}s$/", $_POST["eposta"]) || preg_match("/^[a-zA-Z]+([.][a-zA-Z]+){0,1}@ehu[.]e[u]{0,1}s$/", $_POST["eposta"])
+            || preg_match("/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/", $_POST["eposta"])     
+                 )){
 				echo("Zerbitzariak ez du korreoa onartzen <br>"); 
 			}
 			else if(!(preg_match("/^.{10,}$/", $_POST["galdera"]))){

@@ -11,7 +11,7 @@
 		<h1>Aitor Otero</h1>
 		<h4>Espezialitatea: Softwarea</h4>
 		<img src="../images/Mikel.jpg" height="100px">
-		<h5>Udalerria: Gallarta</h5>
+		<h5>Udalerria: Muskiz</h5>
 		<br><br>
 		<h1>Eneko Cuesta</h1>
 		<h4>Espezialitatea: Softwarea</h4>

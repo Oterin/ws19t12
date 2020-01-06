@@ -20,7 +20,9 @@
 				<input type="reset" id="ezabatu" value=" Ezabatu " onclick="kenduirudia()"></input><br>
 			</form>
 		</div>
+        
 	</section>
+
 	<?php include '../html/Footer.html' ?>
 	<!--<script src="../js/jquery-3.4.1.min.js"></script>-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

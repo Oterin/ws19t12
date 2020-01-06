@@ -16,7 +16,7 @@ include '../php/DbConfig.php';
 			<th>Asmatugabeak</th>
 		</tr>
 		</thead>
-		<?php foreach ($konexioa->query("SELECT user, asmatuak, asmatugabeak FROM puntuazioa WHERE gaia = '$gaia'") as $row){  ?>
+		<?php foreach ($konexioa->query("SELECT user, asmatuak, asmatugabeak FROM puntuazioa WHERE gaia = '$gaia' ORDER BY asmatuak DESC") as $row){  ?>
 		<tr>
 			<td><?php echo $row['user']?></td>
 			<td><?php echo $row['asmatuak']?></td>

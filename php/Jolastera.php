@@ -8,7 +8,7 @@
 	<section class="main" id="s1">
 		<div align="left">
 			<div style="border-style: solid;padding: 10px 10px 10px 10px;">
-				<p>Kaixo Jokalari, aukeratu jokatuko duzun galderaren gaia!</p>
+				<p>Kaixo Jokalari, aukeratu jokatuko duzun galderaren gaia eta zure izena!</p>
 			<form id="jolastu" name="jolastu" action="JolastuGaldera.php" method="post" enctype="multipart/form-data">
 				<?php
 				include '../php/DbConfig.php';
@@ -22,6 +22,14 @@
 					exit();
 				}
 				?>
+				<?php 
+				if (isset($_SESSION['posta'])){
+					$izena = $_SESSION["deiturak"];
+					echo('<input type="text" name="nick" id="nick" value="'.$izena.'" disabled>');
+				}else{
+					echo('<input type="text" name="nick" id="nick">');
+				}?>
+				
 				<select name="gaia">
 					<?php
 					foreach ($konexioa->query('SELECT DISTINCT Gaia FROM questions') as $row) { ?>
@@ -32,7 +40,6 @@
 
 				
                 <button type="submit" id="some" value="some">Bidali</button>
-				<input type="reset" id="ezabatu" value=" Ezabatu " onclick="kenduirudia()"></input><br>
 			</form>
 		</div>
 		</div>
