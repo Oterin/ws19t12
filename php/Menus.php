@@ -6,6 +6,7 @@
 </header>
 <nav class='main' id='n1' role='navigation'>
 	<span id="hasieraspan"><a href='Layout.php' id="hasiera">Hasiera</a></span>
+	<span id="pasahitzaBerriaSpan"><a href="PasahitzaBerrezarri.php" id="pasahitzaBerria">Pasahitza Berrezarri</a></span>
 	<span id="kredituakspan"><a href='Credits.php' id="kredituak">Kredituak</a></span>
 </nav>
 
